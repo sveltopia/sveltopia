@@ -35,7 +35,7 @@
 
 <div data-theme-switcher class="relative">
   <button
-    class="cursor-pointer rounded-lg p-2.5 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+    class="cursor-pointer rounded-lg p-2.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
     aria-label="Toggle theme"
     onclick={() => (isOpen = !isOpen)}
   >
@@ -53,11 +53,11 @@
 
   {#if isOpen}
     <div
-      class="absolute top-full right-0 z-50 mt-2 min-w-[180px] rounded-lg border bg-popover p-1 shadow-lg"
+      class="absolute top-full right-0 z-50 mt-2 min-w-[180px] rounded-lg border border-border bg-popover p-1 shadow-lg"
     >
       <button
         onclick={() => selectMode('light')}
-        class="flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors hover:bg-secondary {userPrefersMode.current ===
+        class="flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors hover:bg-muted {userPrefersMode.current ===
         'light'
           ? 'font-medium text-foreground'
           : 'text-muted-foreground'}"
@@ -67,7 +67,7 @@
       </button>
       <button
         onclick={() => selectMode('dark')}
-        class="flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors hover:bg-secondary {userPrefersMode.current ===
+        class="flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors hover:bg-muted {userPrefersMode.current ===
         'dark'
           ? 'font-medium text-foreground'
           : 'text-muted-foreground'}"
@@ -77,7 +77,7 @@
       </button>
       <button
         onclick={() => selectMode('system')}
-        class="flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors hover:bg-secondary {userPrefersMode.current ===
+        class="flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors hover:bg-muted {userPrefersMode.current ===
         'system'
           ? 'font-medium text-foreground'
           : 'text-muted-foreground'}"
